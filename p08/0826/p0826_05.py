@@ -81,9 +81,9 @@
 # 원의 반지름을 입력받아
 # 원의 넓이를 출력하시오 # ㅠr**2 #ㅠ = 3.14
 # 원의 둘레 : 2*pi*length
-pi = 3.14
-length = int(input("반지름을 입력하시오."))
-print("원의넓이{}\t원의 둘레{:.2f}".format(pi*(length**2),2*pi*length))
+# pi = 3.14
+# length = int(input("반지름을 입력하시오."))
+# print("원의넓이{}\t원의 둘레{:.2f}".format(pi*(length**2),2*pi*length))
 
 
 
