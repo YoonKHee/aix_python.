@@ -70,24 +70,44 @@
 #     print("작전실패")
 
 
-name = input("이름 :")
-kor = int(input("국어점수 입력:"))
-eng = int(input("영어점수 입력:"))
-avg = (kor+eng)/2
+# name = input("이름 :")
+# kor = int(input("국어점수 입력:"))
+# eng = int(input("영어점수 입력:"))
+# avg = (kor+eng)/2
 
-if avg>=90:
-    grade = "A"
-elif avg>=80:
-    grade ="B"
-elif avg>=70:
-    grade ="C"
-elif avg>=60:
-    grade ="D"
-else:
-    grade ="F"
+# if avg>=90:
+#     grade = "A"
+# elif avg>=80:
+#     grade ="B"
+# elif avg>=70:
+#     grade ="C"
+# elif avg>=60:
+#     grade ="D"
+# else:
+#     grade ="F"
 
-print("="*25)
-print("{}학생 성적표".format(name))
-print("평균점수 :",avg)
-print("최종학점 :",grade)
-print("="*25)
+# print("="*25)
+# print("{}학생 성적표".format(name))
+# print("평균점수 :",avg)
+# print("최종학점 :",grade)
+# print("="*25)
+
+
+
+age = int(input("나이 :"))
+print("나이 :",age)
+if age>=65: print("경로우대: 무료")
+elif 20<=age<=64: print("성인: 14,000원")
+elif 8<=age<=19: print("청소년: 9,000원")
+else: print("어린이: 무료")
+
+
+import random
+lotto = random.sample(range(1,46),6)
+lotto.sort()
+b_no = int(input("보너스 번호:"))
+print("로또번호: ",lotto)
+
+if b_no in lotto:print("당첨확률상승!")
+else: print("아쉽지만 다음 기회에!")
+            
