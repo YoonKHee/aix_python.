@@ -148,7 +148,7 @@ eng = []
 math = []
 sum = []
 avg = []
-for i in range(1):
+for i in range(3):
     no = i+1
     name.append(input("이름 :"))
     kor.append(int(input("국어 :")))
@@ -156,5 +156,5 @@ for i in range(1):
     math.append(int(input("수학 :")))
     sum.append(int(kor[i]+eng[i]+math[i]))
     avg.append(sum[i]/3)
-for i in range(1):
+for i in range(3):
     print("{}\t{}\t{}\t{}\t{}\t{}\t{:.2f}".format(i+1,name[i],kor[i],eng[i],math[i],sum[i],avg[i]))
