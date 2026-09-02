@@ -48,10 +48,33 @@ while True:
             print("{}\t{}\t{}\t{}\t{}\t{}\t{:.2f}".format(*i))
     elif click==3:
         print("학생성적수정")
-        stu[input("바꿀학생번호입력:"-1)][input("바꿀거 입력(번호:0, 이름:1, 국어:2, 영어:3, 수학:4, 합계:5, 평균:6):")] = input("바꿀값을 입력:")
+        while True:
+            i = int(input("학생번호"))
+            if i ==0:
+                break
+            j = int(input("1이름2국어3영어4수학5합계6평균:"))
+            if j > 6 or j < 0:
+                continue
+            stu[i-1][j] = input("바꿀내용:")
+            
     elif click==4:
         print("학생성적삭제")
+        while True:
+            i = input("삭제할 학생 번호 입력. 0: 종료")
+            if i==0:
+                print("종료")
+                break
+            for i in no:
+                pop.stu[i]
+            for i not in no:
+                print("1,2만 클릭하세요.")
+                continue
     elif click==5:
         print("학생검색")
-else:print("프로그램 종료")
+    elif click==0:
+        print("프로그램 종료")
+        break
+    else:
+        print("등록된 숫자만 입력:")
+        continue
 

@@ -1,6 +1,4 @@
-stu_list = []
-while True:
-
+def main_print():
     print("[학생성적프로그램]")
     print("0. 종료")
     print("1. 학생입력:")
@@ -10,8 +8,8 @@ while True:
     print("5. 학생검색:")
     print("0. 프로그램종료:")
     print("-"*40)
-    choice = int(input("원하는 번호 입력>>"))
-    if choice == 1:
+
+def stu_input(): # 학생입력함수
         print("[학생성적입력]")
         while True:
             no = len(stu_list)+1
@@ -28,7 +26,14 @@ while True:
             print("학생성적이 입력되었습니다")
             print()
 
-        
+
+stu_list = []
+while True:
+    main_print()# 함수호출
+    print()
+    choice = int(input("원하는 번호 입력>>"))
+    if choice == 1:
+        stu_input()
     elif choice == 2:
         print(["학생성적출력"])
         print("입력된 학생 성적:",len(stu_list))
@@ -36,8 +41,6 @@ while True:
         print("-"*60)
         for s in stu_list:
             print("{}\t{}\t{}\t{}\t{}\t{}\t{:.2f}".format(*s))
-
-            
     elif choice == 3:
         print("[학생성적수정]")
         i = int(input("학생 번호:"))
