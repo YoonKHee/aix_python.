@@ -1,8 +1,13 @@
 
+stuList = []
+title = ["번호","이름","국어","영어","수학","합계","평균","등수"]
+s_title = ["no","name","kor","eng","math","total","avg","rank"]
+stuNo = 1 # 전역변수
+
 def write_stu():
     with open("C:/aaa/stu.txt",'w',encoding='utf-8') as f:
         for i in stuList:
-            str = f"{i['no']}{i['name']}{i['kor']}{i['eng']}{i['math']}{i['total']}{i['avg']}{i['rank']}"
+            str = f"{i['no']},{i['name']},{i['kor']},{i['eng']},{i['math']},{i['total']},{i['avg']:.2f},{i['rank']}"
             f.write(str+"\n")
     print("저장되었습니다.")
     print()
@@ -75,5 +80,3 @@ def read_stu():
             stuList.append(dict(zip(s_title,stu)))
             stuNo = len(stuList)+1
         
-
-
