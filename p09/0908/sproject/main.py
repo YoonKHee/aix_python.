@@ -2,30 +2,28 @@
 from student import*
 from students import*
 from func import*
-s_no = 1
+
+
+
+
 
 while True:
-    global s_no
     choice = main()
     if choice == 0:
         print("종료")
         break 
-    elif choice ==1:print("입력")
-    no = s_no
-    name = input("이름입력:")
-    kor = int(input("국어:"))
-    eng = int(input("영어:"))
-    math = int(input("수학:"))
-    total = kor + eng + math
-    avg = total/3
-    stus.add(Student(no,name,kor,eng,math))
-        print(f"{stuNum}.{name}학생 성적이 저장되었습니다.")
-        print()
-        s_no += 1
+    elif choice ==1:
+        s_input()
 
-    elif choice ==2:print("출력")
-    elif choice ==3:print("수정")
-    elif choice ==9:print("저장")
+    elif choice ==2:
+        print("출력")
+
+    elif choice ==3:
+        print("수정")
+
+    elif choice ==9:
+        print("저장")
+
     else: pass
 
 
