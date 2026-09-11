@@ -1,0 +1,23 @@
+from student import*
+from students import*
+from func import*
+
+# s_no = 1
+# stus = Students()
+
+stuRead()
+while True:
+    choice = main()
+    if choice ==0:
+        print("프로그램을 종료합니다")
+        break
+    if choice==1:
+        s_input()  
+    if choice==2:
+        stus.print()
+    if choice==3:
+        s_update()
+    if choice==4:
+        delStu()
+    if choice==5:
+        stuWrite()

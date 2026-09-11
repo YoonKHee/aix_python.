@@ -36,7 +36,7 @@ def s_input():#2 성적입력화면
         print()
         s_no += 1
 
-
+# 학생성적변경
 def c_score(sub,score):
     print(f"{sub}점수 변경")
     print("현재점수:",score)
@@ -70,34 +70,61 @@ def s_update():
         print(f"{name}학생이 없습니다.")
 
 
-def writeStu():
-    print("학생성적저장")
+# # 학생성적저장하기
+# def writeStu():
+#     print("학생성적저장")
+#     global s_no
+#     with open("C:\\Users\\admin\\Desktop\\Ai융복합 학원\\python\\aix_python.-main\\aix_python.-main\\p09\\stu.txt","w",encoding="utf-8") as f:
+#         for s in stus.slist:
+#             str = s.s_str()
+#             f.write(str+"\n")
+#         print("파일이 저장되었습니다")
+#         print()
+
+
+def stuWrite():
     global s_no
-    with open("C:\\Users\\admin\\Desktop\\Ai융복합 학원\\python\\aix_python.-main\\aix_python.-main\\p09\\stu.txt","w",encoding="utf-8") as f:
+    with open("C:\\workspace\\Python\\aix_python\\2026\\new.txt","w",encoding="utf-8") as f:
         for s in stus.slist:
             str = s.s_str()
             f.write(str+"\n")
-        print("파일이 저장되었습니다")
+        print("파일저장 완료")
         print()
 
 
-def readStu():
-    global s_no
-    with open("C:\\Users\\admin\\Desktop\\Ai융복합 학원\\python\\aix_python.-main\\aix_python.-main\\p09\\stu.txt","r",encoding="utf-8") as f:
+#학생성적불러오기
+# def readStu():
+#     global s_no
+#     with open("C:\\Users\\admin\\Desktop\\Ai융복합 학원\\python\\aix_python.-main\\aix_python.-main\\p09\\stu.txt","r",encoding="utf-8") as f:
+#         while True:
+#             str = f.readline()
+#             if str =="": break
+#             stu = str.split(",")
+#             for i,s in enumerate(stu):
+#                 if 0<=i<=1:continue
+#                 elif 2<=i<=5:stu[i] = int(s.strip())
+#                 elif i==6: stu[i] = float(s.strip())
+#                 elif i==7: stu[i] = int(s.strip())
+#             stus.add(Student(stu[0],stu[1],stu[2],stu[3],stu[4]))
+#             s_no = len(stus.slist)+1
+
+def stuRead():
+    with open("C:\\workspace\\Python\\aix_python\\2026\\new.txt","r",encoding="utf-8") as f:
+        global s_no
         while True:
             str = f.readline()
-            if str =="": break
+            if str == "": break
             stu = str.split(",")
             for i,s in enumerate(stu):
                 if 0<=i<=1:continue
-                elif 2<=i<=5:stu[i] = int(s.strip())
-                elif i==6: stu[i] = float(s.strip())
-                elif i==7: stu[i] = int(s.strip())
+                elif 2<=i<=5 or i==7:
+                    stu[i] = int(s.strip())
+                elif i==6: 
+                    stu [i] = float(s.strip())
             stus.add(Student(stu[0],stu[1],stu[2],stu[3],stu[4]))
-            s_no = len(stus.slist)+1
+            s_no = len(stus.slist) + 1
 
-
-
+# 학생성적 삭제하기
 def delStu():
     print("학생성적삭제")
     stus.print()
