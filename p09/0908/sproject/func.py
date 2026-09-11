@@ -33,3 +33,8 @@ def s_input():
         print(f"{s_no}.{name}학생 성적이 저장되었습니다.")
         print()
         s_no += 1
+
+
+def s_output():
+    while True:
+        stus.print()
